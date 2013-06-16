@@ -25,7 +25,7 @@
 }
 
 - (void)drawRect:(CGRect)rect {
-	[(ESTableViewCell *)self.superview drawCellView:rect];
+	[(PQTableViewCell *)self.superview drawCellView:rect];
 }
 
 @end
@@ -38,7 +38,7 @@
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
-		self.cellView = [[ESTableViewCellView alloc] initWithFrame:CGRectZero];
+		self.cellView = [[PQTableViewCellView alloc] initWithFrame:CGRectZero];
 		[self addSubview:self.cellView];
     }
 	
