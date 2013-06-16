@@ -8,12 +8,12 @@
 //  Based on ABTableViewCell by Loren Brichter.
 //
 
-#import "ESTableViewCell.h"
+#import "PQTableViewCell.h"
 
-@interface ESTableViewCellView : UIView
+@interface PQTableViewCellView : UIView
 @end
 
-@implementation ESTableViewCellView
+@implementation PQTableViewCellView
 
 - (id)initWithFrame:(CGRect)frame {
 	if ((self = [super initWithFrame:frame])) {
@@ -30,11 +30,11 @@
 
 @end
 
-@interface ESTableViewCell ()
+@interface PQTableViewCell ()
 @property (strong, readwrite) UIView *cellView;
 @end
 
-@implementation ESTableViewCell
+@implementation PQTableViewCell
 
 - (id)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
     if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
@@ -71,7 +71,9 @@
     [self.textLabel removeFromSuperview];
     self.detailTextLabel.hidden = YES;
     [self.detailTextLabel removeFromSuperview];
+    self.backgroundView.hidden = YES;
     [self.backgroundView removeFromSuperview];
+    self.selectedBackgroundView.hidden = YES;
     [self.selectedBackgroundView removeFromSuperview];
     self.imageView.hidden = YES;
     [self.imageView removeFromSuperview];
